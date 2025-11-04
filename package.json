@@ -1,0 +1,53 @@
+{
+  "name": "@dylitan/gemini-optimizer",
+  "version": "0.1.0",
+  "description": "Optimiza costos de prompts Gemini comprimiendo el historial en imágenes 768×N (tall image). System y último USER quedan en texto. Modo auto decide por tokens reales.",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "index.d.ts",
+  "keywords": [
+    "gemini",
+    "google genai",
+    "optimizer",
+    "token-cost",
+    "image-compression",
+    "ocr",
+    "llm",
+    "prompt-engineering"
+  ],
+  "author": "Dylitan",
+  "license": "MIT",
+  "homepage": "https://github.com/dylitan/gemini-optimizer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylitan/gemini-optimizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dylitan/gemini-optimizer/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@google/genai": ">=0.3.0"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.58"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "node --version && node -e \"import('./src/index.js').then(()=>console.log('import ok'))\"",
+    "prepare": "echo \"no build step (ESM puro)\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
